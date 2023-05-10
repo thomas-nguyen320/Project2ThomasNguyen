@@ -34,10 +34,16 @@ class Alarm(QMainWindow,Ui_MainWindow):
                 self.alarm_timer.start(1000)
             else:
                 raise TypeError
+
         except TypeError:
             self.alarmSet_label.setText('Enter a valid time in a 12-hour format')
+            self.alarmHourInp.setText('00')
+            self.alarmMinInp.setText('00')
+
         except ValueError:
             self.alarmSet_label.setText('Enter whole numbers only')
+            self.alarmHourInp.setText('00')
+            self.alarmMinInp.setText('00')
 
     def cancel_alarm(self) -> None:
         '''
