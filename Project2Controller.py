@@ -18,7 +18,7 @@ class Controller(Timer,Alarm,Stopwatch):
         self.pauseBtn.clicked.connect(lambda: self.pauseTimer())
         self.resetBtn.clicked.connect(lambda: self.resetTimer())
 
-        self.stopwatchStartStopBtn.clicked.connect(lambda:self.startWatch())
+        self.stopwatchStartStopBtn.clicked.connect(lambda:self.start_or_stop_Watch())
         self.lapBtn.clicked.connect(lambda:self.lap_stopwatch())
         self.stopwatchReset_btn.clicked.connect(lambda:self.reset_stopwatch())
 

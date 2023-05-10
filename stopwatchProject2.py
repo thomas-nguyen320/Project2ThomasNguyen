@@ -26,7 +26,7 @@ class Stopwatch(QMainWindow,Ui_MainWindow):
         self.stopwatch_timer = QTimer()
         self.stopwatch_timer.timeout.connect(self.update_stopwatch)
 
-    def startWatch(self) -> None:
+    def start_or_stop_Watch(self) -> None:
         '''
         This method will start the stopwatch.
         '''
